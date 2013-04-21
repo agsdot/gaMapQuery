@@ -31,6 +31,15 @@ class LocationsController < ApplicationController
     end
   end
 
+  def send_email
+    @search = params[:search]
+    @to = params[:to]
+    @location = Location.near(@search, 1500, :order => :distance).first
+    @to = params[:to]
+    Contactme.form_email(@to, @search).deliver    
+  end
+
+
     
   # GET /locations/1
   # GET /locations/1.json

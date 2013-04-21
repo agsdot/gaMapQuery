@@ -19,6 +19,13 @@
 
 <br>
 
+ <p class="email"><b>Email me Info</b></p>
+<form action='/send_email' method='post'>
+  <div class="styleindent"><input type='email' name='to' placeholder='email address'></div>
+  <div><input type='hidden' name="search" value="<%= params[:search] %>"></div>
+  <div  class="styleindent"><%= submit_tag 'Send' %></div>
+</form>
+
 
 
 </div>
