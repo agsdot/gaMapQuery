@@ -1,0 +1,19 @@
+<%  file = open("http://maps.googleapis.com/maps/api/directions/json?origin=#{URI.escape(@search)}&destination=#{URI.escape(@location.address)}&sensor=true") %>
+  <% @results = JSON.load(file.read) %>
+<!--<%= @directions = @results["routes"][0]["legs"][0] %> -->
+  <!--    ["steps"][0]["html_instructions"] -->
+
+<ul>
+ <% @results["routes"][0]["legs"][0]["steps"].each_with_index do |direction, index| %>
+	<% if index == @results["routes"][0]["legs"][0]["steps"].size - 1 %>
+		<li><%= direction["html_instructions"].html_safe %></li> 
+	<% else %>	
+		<li><%= direction["html_instructions"].html_safe %> for 
+		<%= direction["distance"]["text"].html_safe %></li>
+	<% end %>
+<% end %>
+</ul>
+
+
+	
+

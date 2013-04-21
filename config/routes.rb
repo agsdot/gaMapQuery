@@ -1,4 +1,14 @@
 GaMapQuery::Application.routes.draw do
+  resources :locations
+
+
+  devise_for :users
+
+  root :to => 'locations#home'
+
+  post '/send_email' => 'locations#send_email'
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

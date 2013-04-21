@@ -1,0 +1,80 @@
+<% if @location %>
+  <div id="outer-container-query"> <!-- make sure to close divs in application.html.erb-->
+    <div id="inner-container"> <!-- make sure to close divs in application.html.erb-->
+      <div class="query">      
+<% else %>
+  <div id="outer-container-noquery"> <!-- make sure to close divs application.html.erb-->
+    <div id="inner-container"> <!-- make sure to close divs in application.html.erb-->
+      <div class="noquery">    
+<% end %>
+
+<h1>gaMapQuery</h1>
+ <%= form_tag root_path,:method => :get do %>
+  <%= text_field_tag :search, params[:search] , :id => "geocomplete"%>
+  <%= submit_tag "Search", :name => 'button' , :class => "btn btn-success", :id => "find" %>
+
+          <!-- <input id="find" type="button" value="find" /> -->
+
+<% end %>
+      </div>
+
+
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="http://ubilabs.github.io/geocomplete/jquery.geocomplete.js"></script>
+<script src="http://ubilabs.github.io/geocomplete/examples/logger.js"></script>
+
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="http://ubilabs.github.io/geocomplete/jquery.geocomplete.js"></script>
+<script src="http://ubilabs.github.io/geocomplete/examples/logger.js"></script>
+
+
+<script>
+  $(function(){
+    
+    $("#geocomplete").geocomplete()
+      .bind("geocode:result", function(event, result){
+        $.log("Result: " + result.formatted_address);
+      })
+      .bind("geocode:error", function(event, status){
+        $.log("ERROR: " + status);
+      })
+      .bind("geocode:multiple", function(event, results){
+        $.log("Multiple: " + results.length + " results found");
+      });
+    
+    $("#find").click(function(){
+      $("#geocomplete").trigger("geocode");
+    });
+    
+    
+    // $("#examples a").click(function(){
+    //   $("#geocomplete").val($(this).text()).trigger("geocode");
+    //   return false;
+    // });
+    
+  });
+</script>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!--
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-57649-7");
+    pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+
+http://ubilabs.github.io/geocomplete/examples/simple.html
+view-source:http://ubilabs.github.io/geocomplete/examples/simple.html
+http://ubilabs.github.io/geocomplete/
+
+-->

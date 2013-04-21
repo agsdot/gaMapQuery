@@ -1,0 +1,15 @@
+<% if @location %>
+<% address = @location.address %>
+<% else %>
+<% address = "10012" %>
+<% end %>
+
+<iframe id="gmap" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%= address %>&amp;ie=UTF8&amp;z=14&amp;output=embed" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="425" height="350"></iframe>
+
+
+
+
+
+
+
+

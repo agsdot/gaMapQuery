@@ -1,0 +1,201 @@
+/*div {
+  border: dashed;
+}
+*/
+body {
+/*  background-color: #006699;
+*/  margin: 0;
+  padding: 0;
+}
+
+body, html {
+height: 100%;
+width: 100%; 
+} 
+
+
+#gmap{
+height: 100%;
+left: 0;
+position: fixed; /* !important;  Acts in pretty much the same way as background-attachment: fixed for an image background. Has to be !important only if you're using the Google Maps API. */
+top: 0;
+width: 100%;
+z-index: 14; } /* Has to be at least one increment smaller in value than the container's z-index */
+
+#outer-container-query , #outer-container{
+/*background: rgba(0, 0, 0, 0.8);*/
+border-radius: 20px;
+/*border: 1px dotted #fff;*/
+/*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);*/
+margin: 0 auto;
+overflow: visible; /*!important;  Has to be !important only if you're using an on/off switch */
+/*padding: 40px;*/
+top: 25px;
+/*margin-bottom: 100px;
+*/
+/*bottom: 100px;*/
+width: 1050px;
+z-index: 15; /* Has to be at least one increment larger in value than the Google Maps iframe z-index */
+
+position: absolute;
+left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+#outer-container-noquery{
+/*background: rgba(0, 0, 0, 0.8);*/
+border-radius: 20px;
+/*border: 1px dotted #fff;*/
+/*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);*/
+margin: 0 auto;
+overflow: visible; /*!important;  Has to be !important only if you're using an on/off switch */
+/*padding: 40px;*/
+top: 25px;
+/*margin-bottom: 100px;
+*/
+/*bottom: 100px;*/
+width: 700px;
+z-index: 15; /* Has to be at least one increment larger in value than the Google Maps iframe z-index */
+
+position: absolute;
+left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+
+#inner-container {
+  border-radius: 20px;
+
+  background-color: #FFFFCC;
+/*  right: 20px;
+*/  bottom: 0px;
+  box-shadow: 0px 0px 50px #999;
+  overflow: scroll;
+  /*padding: 30px;*/
+/*  position: absolute;
+*/  top: 0px;
+  /*width: 1100px;*/
+  margin-bottom: 100px;
+
+}
+
+
+.noquery {
+  text-align: center;
+  margin: 70px auto;
+
+}
+
+.query {
+  text-align: center;
+  margin-top: 40px;
+
+}
+
+
+/*#outer-container .noquery {
+  margin-top: 250px;
+
+
+}*/
+
+
+.center {
+	text-align: center;
+
+}
+
+.fromtop {
+  margin-top: 180px;
+}
+
+
+#search {
+  width: 500px;
+  height: 20px;
+}
+
+#geocomplete {width: 500px; height: 20px}
+
+
+
+.btn {
+	margin-top: -10px;
+}
+
+
+#bodycontent {
+/*  background-color: blue;*/
+  width: 90%;
+  position: relative;
+  margin: 40px auto;
+}
+
+#georesults {
+  border-radius: 10px;
+  /*box-sizing: border-box;*/
+  width: 460px;
+  background-color: white;
+  position: relative;
+  float: right;
+  top: 0;
+  right: 0;
+  margin-bottom: 45px;
+
+
+}
+
+#geoimages {
+  border-radius: 10px;
+/* background-color: yellow;
+*/background-color: white;
+  margin-right: 470px;
+  padding: 20px;
+  bottom: 0px;
+}
+
+#geoimages img {
+  width: 100%;
+}
+
+#georesults p { 
+/*.distance {
+*/text-indent: 15px;
+
+}
+
+li {
+/*list-style-type:none;*/
+/*text-indent: 15px;*/
+
+}
+
+.distance , .directions , .email , .destinationmap, .origindestinationmap, .bigmap , .smallmap {
+  font-size: large; 
+  font-weight: bold;
+}
+
+.styleindent {
+  text-indent: 20px;  
+  /*.tab { margin-left: 40px; }*/
+}
+
+.marginleftindent {
+ margin-left: 20px;
+}
+
+.marginbottomindent {
+ margin-bottom: 20px;
+}
+
+
+.roundedcorners {
+  border-radius: 10px;
+}
+

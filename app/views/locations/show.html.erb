@@ -1,0 +1,37 @@
+<p id="notice" class="marginleftindent"><%= notice %></p>
+<!--<%= params.inspect %>
+<%= params[:q].inspect %>
+
+  <%= @location.inspect %> -->
+
+<p class="marginleftindent">
+  <b>Address:</b>
+  <%= @location.address %>
+</p>
+
+<p class="marginleftindent">
+  <b>Latitude:</b>
+  <%= @location.latitude %>
+</p>
+
+<p class="marginleftindent">
+  <b>Longitude:</b>
+  <%= @location.longitude %>
+</p>	
+
+<p class="marginleftindent">	
+
+<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@location.latitude}%2C#{@location.longitude}&zoom=14&size=400x400&sensor=false" %>
+</p>
+
+<h3 class="marginleftindent">Nearby</h3>
+<ul>
+<% for location in @location.nearbys(500)%>
+  <li><%= link_to location.address, location %> (<%= location.distance.round(2) %>) miles</li>
+<% end %>
+</ul>
+
+<p class="marginleftindent">
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
+</p>
