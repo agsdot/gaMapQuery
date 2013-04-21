@@ -3,8 +3,7 @@
 }
 */
 body {
-/*  background-color: #006699;
-*/  margin: 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -89,21 +88,12 @@ margin-right:auto;
 .noquery {
   text-align: center;
   margin: 70px auto;
-
 }
 
 .query {
   text-align: center;
   margin-top: 40px;
-
 }
-
-
-/*#outer-container .noquery {
-  margin-top: 250px;
-
-
-}*/
 
 
 .center {
@@ -122,8 +112,6 @@ margin-right:auto;
 }
 
 #geocomplete {width: 500px; height: 20px}
-
-
 
 .btn {
 	margin-top: -10px;
@@ -165,16 +153,10 @@ margin-right:auto;
 }
 
 #georesults p { 
-/*.distance {
-*/text-indent: 15px;
+text-indent: 15px;
 
 }
 
-li {
-/*list-style-type:none;*/
-/*text-indent: 15px;*/
-
-}
 
 .distance , .directions , .email , .destinationmap, .origindestinationmap, .bigmap , .smallmap {
   font-size: large; 
@@ -183,7 +165,6 @@ li {
 
 .styleindent {
   text-indent: 20px;  
-  /*.tab { margin-left: 40px; }*/
 }
 
 .marginleftindent {
