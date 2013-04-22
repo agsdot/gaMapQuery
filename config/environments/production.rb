@@ -18,7 +18,7 @@ GaMapQuery::Application.configure do
     :port => 587, #secure email port
     :domain => 'agsdot.com', #domain name of website, or any domain
     :user_name => 'app15147705@heroku.com',
-    :password => 'MANDRILL_APIKEY', 
+    :password => ENV['MANDRILL_APIKEY'], 
     :authentication =>'plain' ,
     :enable_starttls_auto => true,
   }
