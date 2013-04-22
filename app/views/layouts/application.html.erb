@@ -9,7 +9,14 @@
 </head>
 <body>
 	<%= render 'common/googlebackgroundmap' %>
- 	<div id="outer-container">
+ 	
+<% if @location %>
+  <div id="outer-container-query"> <!-- make sure to close divs in application.html.erb-->
+<% else %>
+  <div id="outer-container-noquery"> <!-- make sure to close divs in application.html.erb-->
+<% end %>
+
+  
 		<div id="inner-container">
 
 		<%= yield %>
@@ -20,5 +27,15 @@
 </html>
 
 
+
+
+<% if @location %>
+      <div class="query">      
+<% else %>
+      <div class="noquery">    
+<% end %>
+
+
+    <div id="inner-container"> <!-- make sure to close divs in application.html.erb-->
 
 

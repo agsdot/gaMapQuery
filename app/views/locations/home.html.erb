@@ -21,8 +21,13 @@
  <p class="email"><h2>Email me Info</h2></p>
 <form action='/send_email' method='post'>
   <div><input type='hidden' name="search" value="<%= params[:search] %>"></div>
-  <div class="styleindent"><input type='email' name='to' placeholder='email address'> <%= submit_tag 'Send' , :class => "emailbutton" %></div>
+  <div class="styleindent"><input type='email' name='to' placeholder='email address'> <%= submit_tag 'Send' , :class => "btn btn-success" %></div>
 </form>
+
+
+
+
+
 
 
 
