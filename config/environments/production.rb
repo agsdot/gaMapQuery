@@ -8,6 +8,22 @@ GaMapQuery::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  # Do care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+    :address => 'smtp.mandrillapp.com',
+    :port => 587, #secure email port
+    :domain => 'agsdot.com', #domain name of website, or any domain
+    :user_name => 'app15147705@heroku.com',
+    :password => 'MANDRILL_APIKEY', 
+    :authentication =>'plain' ,
+    :enable_starttls_auto => true,
+  }
+
+
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
 
