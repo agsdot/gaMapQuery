@@ -5,21 +5,20 @@
 
 
 <div id="bodycontent">
-<div id="georesults">
+<span class="span5">
 
 
-<br>
-<p class="directions"><b>Directions</b></p>
+<p class="directions"><h2>Directions</h2></p>
 <p><%= render 'common/directions' %></p>
 
 <br>
 
-<p class="distance"><b>Distance</b></p>
+<p class="distance"><h2>Distance</h2></p>
 <p class="marginleftindent">     <%= render 'common/distance' %> miles</p>
 
 <br>
 
- <p class="email"><b>Email me Info</b></p>
+ <p class="email"><h2>Email me Info</h2></p>
 <form action='/send_email' method='post'>
   <div><input type='hidden' name="search" value="<%= params[:search] %>"></div>
   <div class="styleindent"><input type='email' name='to' placeholder='email address'> <%= submit_tag 'Send' , :class => "emailbutton" %></div>
@@ -27,27 +26,26 @@
 
 
 
-</div>
+</span>
 
 
-
-<div id="geoimages">
-<p class="destinationmap">GA Location</p>
+<span class=" span5">
+<p class="destinationmap"><h2>GA Location</h2></p>
 <p class="marginleftindent"><%= render 'common/address' %></p>
-<p><%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@location.latitude}%2C#{@location.longitude}&zoom=14&size=400x400&sensor=false", :class => "roundedcorners" %>
+<p class="marginleftindent"><%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@location.latitude}%2C#{@location.longitude}&zoom=14&size=400x400&sensor=false", :class => "roundedcorners" %>
 
 
 <br>
 <br>
 
-<p class="origindestinationmap">Driving Map</p>
+<p class="origindestinationmap"><h2>Driving Map</h2></p>
 <!-- w h
 425 350 original -->
-<p><iframe class="roundedcorners" width="435" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=<%= params[:search] %>&amp;daddr=<%= @location.address %>&amp;hl=en&amp;z=6&amp;output=embed"></iframe><br /></p>
+<p class="marginleftindent"><iframe class="roundedcorners" height="375" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=<%= params[:search] %>&amp;daddr=<%= @location.address %>&amp;hl=en&amp;z=6&amp;output=embed"></iframe><br /></p>
 
-
-
-</div>
+<br>
+<br>
+</span>
 </div>
 
 

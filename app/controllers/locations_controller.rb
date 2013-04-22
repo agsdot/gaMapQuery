@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:home]
-  
+  before_filter :authenticate_user!, :except => [:home, :send_email]
+
   # GET /locations
   # GET /locations.json
   def index

@@ -8,7 +8,10 @@
       <div class="noquery">    
 <% end %>
 
-<h1>gaMapQuery</h1>
+<h1>T<img src="assets/google-marker.png" width="23px" />ke me to <img src="assets/GA_logo_1797cog.png" width="35px" /></h1>
+
+
+
  <%= form_tag root_path,:method => :get do %>
   <%= text_field_tag :search, params[:search] , :id => "geocomplete"%>
   <%= submit_tag "Search", :name => 'button' , :class => "btn btn-success", :id => "find" %>
