@@ -10,10 +10,13 @@ describe Location do
     location = Location.create( :address => "10012" )
     expect(location.latitude).to be_a_kind_of Float
     expect(location.longitude).to be_a_kind_of Float
-    expect(location.latitude).to
    end
 
-
+  #  it "Has a Longitude that is within -180 to 180" do
+  #   location = Location.create( :address => "10012")
+  #   location.longitude = 200
+  #   expect(location.longitude).to be_within(-180.0).of(180.0)
+  # end
 
 end
 
