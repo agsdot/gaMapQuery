@@ -1,1 +1,1 @@
-A location finder for General Assembly sites
+A location finder for General Assembly sites.  Project in April for GA.
